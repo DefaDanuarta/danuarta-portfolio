@@ -1,103 +1,113 @@
-import Image from "next/image";
+"use client";
+import React from 'react';
+import Marquee from '@/components/Marquee';
+import LogoMarquee from '@/components/LogoMarquee';
+import Navbar from '@/components/NavBar';
+import { motion } from "framer-motion";
+import FadeInWhenVisible from '@/components/FadeInWhenVisible';
+import { StaggerContainer, StaggerItem } from "@/components/StaggerContainer";
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipPanel,
+} from '@/components/animate-ui/components/base/tooltip';
+// import CurvedLoop from '@/components/CurvedLoop';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <main>
+        {/* navbar */}
+        <Navbar />
+        <motion.div
+          className='relative flex w-full flex-col justify-center'
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+          {/* landing page */}
+          <FadeInWhenVisible>
+            <section className="flex flex-col mb-30 mt-48 mx-4 xl:mx-40 lg:mx-16 md:mx-8 md:flex-row justify-center">
+              <div className="flex flex-col flex-3">
+                <p className="text-wrap font-light text-start text-5xl mb-8 md:text-start lg:text-6xl xl:text-7xl">
+                  Craft experience to connect <br /><span className="text-green-300">insight with inspiration.</span>
+                </p>
+
+                {/* Divider */}
+                <div className="h-px w-full bg-neutral-700"></div>
+
+                <p className='text-start text-pretty font-extralight text-neutral-300 mt-8 text-sm md:text-base'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, eum numquam iure enim necessitatibus molestias. Doloremque pariatur at esse repellat reiciendis veritatis commodi, sapiente quibusdam neque excepturi atque vero dolorum.
+                </p>
+
+                {/* Group of Links */}
+                <div className="flex flex-row justify-start items-start mt-8">
+                  <a href="#" className="uppercase decoration-1 font-thin me-3 opacity-60 hover:underline hover:opacity-100 underline-offset-2 transition-all text-sm md:text-base md:me-4">LinkedIn</a>
+                  <a href="#" className="uppercase decoration-1 font-thin me-3 opacity-60 hover:underline hover:opacity-100 underline-offset-2 transition-all text-sm md:text-base md:me-4">Github</a>
+                  <a href="#" className="uppercase decoration-1 font-thin opacity-60 hover:underline hover:opacity-100 underline-offset-2 transition-all text-sm md:text-base md:me-4">Email</a>
+                </div>
+              </div>
+            </section>
+          </FadeInWhenVisible>
+
+          {/* sliding text */}
+          <FadeInWhenVisible delay={0.5}>
+            <section className='border-t border-b border-neutral-800'>
+              <Marquee />
+            </section>
+          </FadeInWhenVisible>
+
+
+          {/* Short About me Section  */}
+          <FadeInWhenVisible delay={0.5}>
+            <section className='flex flex-col my-32 mx-4 justify-center text-start xl:mx-40 lg:mx-16 md:mx-8 md:text-center'>
+              {/* about me title with tool tip*/}
+              <div className=''>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <a href="/about" className="font-light justify-center text-center text-5xl opacity-100 hover:underline hover:opacity-60 underline-offset-2 decoration-1 transition-all">
+                      About Me
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipPanel>
+                    <p>Get To Know Me :D</p>
+                  </TooltipPanel>
+                </Tooltip>
+              </div>
+              {/* about me content */}
+              <p className='flex mt-6 font-extralight opacity-70 text-sm md:text-xl md:px-12 lg:px-16'>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, dolores nulla. Laboriosam fugiat magni nemo sapiente alias, delectus excepturi molestias error nam maxime? Voluptatum asperiores, nesciunt accusamus repudiandae magni eum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis reprehenderit at nesciunt accusamus sunt dolores excepturi ducimus eaque dignissimos pariatur. Nemo ex perspiciatis, tenetur dolor beatae similique quod nobis eligendi!
+              </p>
+            </section>
+          </FadeInWhenVisible>
+
+          {/* Featured Project  */}
+          <FadeInWhenVisible delay={0.5}>
+            <section className='flex flex-col my-32 mx-4 xl:mx-40 lg:mx-16 md:mx-8 justify-center'>
+              <div className=''>
+                {/* headline */}
+                <Tooltip>
+                  <TooltipTrigger>
+                    <a href="/about" className="font-light justify-center text-center text-5xl opacity-100 hover:underline hover:opacity-60 underline-offset-2 decoration-1 transition-all">
+                      Glimpse Into My Journey
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipPanel>
+                    <p>Take a Look</p>
+                  </TooltipPanel>
+                </Tooltip>
+
+                {/* subtitle */}
+                <p className=''>
+                  Projects that reflect my passion and growth in the field. 
+                </p>
+              </div>
+            </section>
+          </FadeInWhenVisible>
+
+        </motion.div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
