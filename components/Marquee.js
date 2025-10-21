@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 
 export default function Marquee() {
-  const text = "DATA   •   DESIGNS   •   STORYTELLING   •   VISUALIZATION   •   LEADERSHIP   •   UI/UX   •   ";
+  const text = "DATA   •   DESIGNS   •   DATA STORYTELLING   •   VISUALIZATION   •   UI/UX   •   ";
 
   return (
     <div className="relative overflow-hidden w-full py-4">
@@ -12,7 +12,7 @@ export default function Marquee() {
         animate={{ x: ["0%", "-100%"] }}
         transition={{
           repeat: Infinity,
-          duration: 200,
+          duration: 300,
           ease: "linear",
         }}
       >

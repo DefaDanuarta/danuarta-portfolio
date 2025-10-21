@@ -145,3 +145,12 @@ body {
   animation: scroll 25s linear infinite;
 }
 
+/* .card {
+  transition: transform 0.25s cubic-bezier(0.33, 1, 0.68, 1),
+              box-shadow 0.25s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+} */
