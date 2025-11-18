@@ -13,6 +13,7 @@ import {
 } from '@/components/animate-ui/components/base/tooltip';
 import Footer from '@/components/Footer';
 import ExperienceSection from '@/components/Experience';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -30,7 +31,15 @@ export default function Home() {
           <section className="flex flex-col my-28 mx-4 xl:mx-40 lg:mx-16 md:mx-8 md:flex-row justify-center gap-8">
             {/* hero image */}
             <div className="flex-1/9 w-full md:w-2xs lg:w-2xs">
-              <img src="/assets/img/new-hero2.jpg" alt="" className="rounded-full w-full overflow-hidden" />
+              <Image
+                src="/assets/img/new-hero2.jpg"
+                alt="Logo"
+                width={2757}
+                height={4007}
+                unoptimized
+                className="rounded-full w-full overflow-hidden object-contain"
+              />
+              {/* <img src="" alt="" className="rounded-full w-full overflow-hidden" /> */}
             </div>
 
             {/* headline */}
@@ -124,66 +133,66 @@ export default function Home() {
             <FadeInWhenVisible>
               <ExperienceSection
                 experiences={[
-                    {
-                      job_title: "Website Administrator & Content Writter",
-                      date: "Feb 2024 - Jan 2025",
-                      organization: "Keluarga Mahasiswa Hindu (KMH)",
-                      location: "Bina Nusantara - West Jakarta, Jakarta",
-                      description:
-                        "Coordinated a creative team across multiple campuses to design spiritual learning materials.",
-                      skills: [
-                        "Team Work",
-                        "Leadership",
-                        "Deadline Management",
-                        "Canva",
-                      ],
-                    },
-                    {
-                      job_title: "Creative Team Coordinator",
-                      date: "Feb 2024 - Jan 2025",
-                      organization: "Keluarga Mahasiswa Hindu (KMH)",
-                      location: "Bina Nusantara - Malang, East Java",
-                      description:
-                        "Coordinated a creative team across multiple campuses to design spiritual learning materials.Coordinated a creative team across multiple campuses to design spiritual learning materials.Coordinated a creative team across multiple campuses to design spiritual learning materials.",
-                      skills: [
-                        "Team Work",
-                        "Leadership",
-                        "Deadline Management",
-                        "Canva",
-                      ],
-                    },
-                    {
-                      job_title: "Freshman Leader & Partner",
-                      date: "Aug 2024 - Jul 2025",
-                      organization: "BINUS First Year Program 2028",
-                      location: "Bina Nusantara - Malang, East Java",
-                      description:
-                        "Led and mentored over 50+ new students to adapt to university life. Assisted in planning, guiding, and presenting academic orientation programs.",
-                      skills: [
-                        "Team Work",
-                        "To-do List",
-                        "Problem Solving",
-                        "Critical Thinking",
-                        "Public Speaking",
-                        "Deadline Management",
-                      ],
-                    },
-                    {
-                      job_title: "Intern Trainee",
-                      date: "Jan 2022 - Aug 2022",
-                      organization: "Studio Kami Mandiri",
-                      location: "Denpasar, Bali",
-                      description:
-                        "Led and mentored over 50+ new students to adapt to university life. Assisted in planning, guiding, and presenting academic orientation programs.",
-                      skills: [
-                        "Team Work",
-                        "To-do List",
-                        "Problem Solving",
-                        "Critical Thinking",
-                        "Public Speaking",
-                        "Deadline Management",
-                      ],
-                    }
+                  {
+                    job_title: "Website Administrator & Content Writter",
+                    date: "Feb 2024 - Jan 2025",
+                    organization: "Keluarga Mahasiswa Hindu (KMH)",
+                    location: "Bina Nusantara - West Jakarta, Jakarta",
+                    description:
+                      "Coordinated a creative team across multiple campuses to design spiritual learning materials.",
+                    skills: [
+                      "Team Work",
+                      "Leadership",
+                      "Deadline Management",
+                      "Canva",
+                    ],
+                  },
+                  {
+                    job_title: "Creative Team Coordinator",
+                    date: "Feb 2024 - Jan 2025",
+                    organization: "Keluarga Mahasiswa Hindu (KMH)",
+                    location: "Bina Nusantara - Malang, East Java",
+                    description:
+                      "Coordinated a creative team across multiple campuses to design spiritual learning materials.Coordinated a creative team across multiple campuses to design spiritual learning materials.Coordinated a creative team across multiple campuses to design spiritual learning materials.",
+                    skills: [
+                      "Team Work",
+                      "Leadership",
+                      "Deadline Management",
+                      "Canva",
+                    ],
+                  },
+                  {
+                    job_title: "Freshman Leader & Partner",
+                    date: "Aug 2024 - Jul 2025",
+                    organization: "BINUS First Year Program 2028",
+                    location: "Bina Nusantara - Malang, East Java",
+                    description:
+                      "Led and mentored over 50+ new students to adapt to university life. Assisted in planning, guiding, and presenting academic orientation programs.",
+                    skills: [
+                      "Team Work",
+                      "To-do List",
+                      "Problem Solving",
+                      "Critical Thinking",
+                      "Public Speaking",
+                      "Deadline Management",
+                    ],
+                  },
+                  {
+                    job_title: "Intern Trainee",
+                    date: "Jan 2022 - Aug 2022",
+                    organization: "Studio Kami Mandiri",
+                    location: "Denpasar, Bali",
+                    description:
+                      "Led and mentored over 50+ new students to adapt to university life. Assisted in planning, guiding, and presenting academic orientation programs.",
+                    skills: [
+                      "Team Work",
+                      "To-do List",
+                      "Problem Solving",
+                      "Critical Thinking",
+                      "Public Speaking",
+                      "Deadline Management",
+                    ],
+                  }
                 ]}
               />
             </FadeInWhenVisible>
