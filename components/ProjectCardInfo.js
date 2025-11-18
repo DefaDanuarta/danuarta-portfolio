@@ -30,14 +30,14 @@ export default function ProjectCardInfo({
       </div>
 
       {/* Category */}
-      <p className="text-sm text-teal-300 font-light mb-3">{category}</p>
+      <p className="text-sm text-[#C68F6B] font-light mb-3">{category}</p>
 
       {/* Description */}
       <p className="text-neutral-300 mb-5 leading-relaxed break-words line-clamp-3 text-sm font-light">{description}</p>
 
       {/* Links */}
-      <a href="#">
-        <button className="rounded-full px-3 py-1 mb-5 text-sm font-extralight text-teal-300 border border-teal-300 hover:bg-teal-300 hover:text-black hover:underline transition-colors">
+      <a href={links} target="_blank">
+        <button className="rounded-full px-3 py-1 mb-5 text-sm font-extralight text-[#C68F6B] border border-[#C68F6B] hover:bg-[#C68F6B] hover:text-black hover:underline transition-colors">
           Public Drive/Repo
         </button>
       </a>

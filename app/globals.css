@@ -144,7 +144,15 @@ body {
   display: inline-flex;
   animation: scroll 25s linear infinite;
 }
+/* html {
+  scroll-behavior: smooth;
+} */
 
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 100px; /* offset untuk navbar */
+}
 /* .card {
   transition: transform 0.25s cubic-bezier(0.33, 1, 0.68, 1),
               box-shadow 0.25s cubic-bezier(0.33, 1, 0.68, 1);
