@@ -2,16 +2,16 @@
 
 export default function ContactCard() {
     return (
-        <section className='flex flex-col bg-neutral-800 border border-neutral-600 rounded-2xl mt-8 mb-2 mx-4 xl:mx-40 lg:mx-16 md:mx-8'>
-            <div className='my-16 text-center px-4'>
-                <p className='text-3xl font-light text-white md:text-5xl'>
-                    I'm Ready to Collaborate
+        <section className="flex flex-col bg-neutral-800 border border-neutral-600 rounded-2xl mt-8 mb-2 mx-4 xl:mx-40 lg:mx-16 md:mx-8">
+            <div className="my-16 text-center px-4">
+                <p className="text-3xl font-light text-white md:text-5xl">
+                    I"m Ready to Collaborate
                 </p>
-                <p className='mt-2 text-sm font-extralight text-neutral-400 md:text-base'>
+                <p className="mt-2 text-sm font-extralight text-neutral-400 md:text-base">
                     Feel free to contact me to start collaborate :D
                 </p>
-                <a href="mailto:defa.danuarta@email.com?subject=Let's%20Collaborate!&body=Hi%20Defa,%0D%0A%0D%0AI’m%20interested%20in%20working%20with%20you%20on%20a%20project.%0D%0A%0D%0ARegards,%0D%0A[Your%20Name]">
-                    <button className='mt-4 px-4 py-2 border text-[#C68F6B] border-[#C68F6B] rounded-full hover:bg-[#C68F6B] hover:text-black transition-all text-sm font-extralight'>
+                <a href="mailto:defa.danuarta@email.com?subject=Lets%20Collaborate!&body=Hi%20Defa,%0D%0A%0D%0AI&apos;m%20interested%20in%20working%20with%20you%20on%20a%20project.%0D%0A%0D%0ARegards,%0D%0A[Your%20Name]">
+                    <button className="mt-4 px-4 py-2 border text-[#C68F6B] border-[#C68F6B] rounded-full hover:bg-[#C68F6B] hover:text-black transition-all text-sm font-extralight">
                         Mail Me <i className="ms-2 fa-solid fa-envelope"></i>
                     </button>
                 </a>
