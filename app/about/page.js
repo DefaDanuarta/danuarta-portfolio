@@ -32,8 +32,8 @@ export default function Home() {
             {/* hero image */}
             <div className="flex-1/9 w-full md:w-2xs lg:w-2xs">
               <Image
-                src="/assets/img/new-hero2.jpg"
-                alt="Logo"
+                src="/assets/img/new-hero2.JPG"
+                alt="Hero Image"
                 width={2757}
                 height={4007}
                 unoptimized
